@@ -1,12 +1,18 @@
-class Activity {
-    public static void main(String args[]){
-
+class Activity{
+    public static void main(String[] args){
         Dog dog = new Dog();
-        dog.name = "Bella";
+        dog.setName("Bella");
+        
+        dog.puppies[0] = "Max";
+        dog.puppies[1] = "Daisy";
 
+        System.out.println(dog.showName());
 
-        System.out.println(dog.name);
+        System.out.println(dog.bark());
+
+        System.out.println(dog.showNumberofPuppies());
+
+        System.out.println("Puppies: " + dog.showPuppies());
+        
     }
-
-    
 }
