@@ -1,36 +1,45 @@
-class Dog {
-    String name;
-    boolean isMale;
-    int NumPuppies;
-    String puppies[] = new String[2];
-    Dog puppy;
-
+class Dog{
+        String name;
+        boolean isMale;
+        int numofPuppies;
+        Dog[] puppies = new Dog[2];
+        Dog puppy;
+        
     public void setName(String name){
         this.name = name;
     }
-
     public String showName(){
         return "Name of the dog: " + name;
     }
-
+    
+    public void setisMale(boolean isMale){
+        this.isMale = isMale;
+    }
+    public boolean showisMale(){
+        return isMale;
+    }
+    
     public String bark(){
-        return name + " Woof!woof!";
+        return "Woof!, Woof!";
     }
-
-    public int setNumberofPuppies(){
-        return NumPuppies = puppies.length;
+    
+    public void setnumofPuppies(int numofPuppies){
+        this.numofPuppies = numofPuppies;
     }
-
-    public String showNumberofPuppies(){
-        return "Number of Puppies" + NumPuppies;
+    public int shownumofPuppies(){
+        return numofPuppies;
     }
-
-    public void setPuppies(int NumPuppies){
-        this.NumPuppies = NumPuppies;
+    
+    public void setPuppies(Dog puppy){
+        for(int i = 0; i < puppies.length; i++){
+        	if(puppies[i] == null){
+            puppies[i] = puppy;
+            numofPuppies++;
+            break;
+    	}
+    	}
     }
-
-    public String[]showPuppies(){
+    public Dog[] showPuppies(){
         return puppies;
     }
 }
-    
