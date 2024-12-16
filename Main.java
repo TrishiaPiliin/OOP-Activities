@@ -23,8 +23,7 @@ public class Main{
     
         for(int i = 0; i < dog.showPuppies().length; i++){
         	if(dog.showPuppies()[i] != null){
-        	
-            System.out.println("Name of Puppies: " + dog.showPuppies()		[i].name);
+        	System.out.println("Name of Puppies: " + dog.showPuppies()[i].name);
             }
         }
     }
